@@ -1,7 +1,7 @@
-// const navbarName = document.getElementsByClassName('navbar-collapse')[0]
-// console.log(navbarName.addClass('d-none'))
+const url = window.location.search;
+console.log(url)
 
-// const search = document.getElementById("icon");
-// search.addEventListener('click', event => {
+const fullTitle = new URLSearchParams(url);
 
-// })
+const title = fullTitle.get('the')
+console.log(title)

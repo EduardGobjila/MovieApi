@@ -1,6 +1,5 @@
 const ul = document.querySelector('#results');
 
-// console.log(buttons)
 
 
 // Method that listens for clicks on the navbar

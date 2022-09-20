@@ -25,12 +25,10 @@ const movieList = (word) => {
          const allMovies = `
         <div class="each-movie">
           <li class="movies" style="list-style:none;">
-          <a href='/show.html?${movie.title}'>
           <div class="each-movie-image">
             <img src="${movie.image}" alt="movie image">
           </div>
           <h1>${movie.title}</h1>
-          </a>
           </li>
        </div>
         `;

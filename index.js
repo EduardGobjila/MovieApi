@@ -59,12 +59,10 @@ const homePage = () => {
       const top250 = `
       <div class="each-movie">
         <li class="movies" style="list-style:none;">
-        <a href='/show.html?${tops.title}'>
       <div class="each-movie-image">
         <img src="${tops.image}" alt="movie image">
       </div>
         <h1>${tops.title}</h1>
-        </a>
         </li>
       </div>
       `;

@@ -23,14 +23,16 @@ const movieList = (word) => {
       // console.log(data.results)
       data.results.forEach((movie) => {
          const allMovies = `
-        <div class="each-movie">
-          <li class="movies" style="list-style:none;">
-          <div class="each-movie-image">
-            <img src="${movie.image}" alt="movie image">
+        <a href="show.html">
+          <div class="each-movie">
+            <li class="movies" style="list-style:none;">
+            <div class="each-movie-image">
+              <img src="${movie.image}" alt="movie image">
+            </div>
+            <h1>${movie.title}</h1>
+            </li>
           </div>
-          <h1>${movie.title}</h1>
-          </li>
-       </div>
+        </a>
         `;
         ul.insertAdjacentHTML("beforeend", allMovies);
       });
@@ -57,14 +59,16 @@ const homePage = () => {
     // console.log(data.items)
     data.items.forEach((tops) => {
       const top250 = `
-      <div class="each-movie">
-        <li class="movies" style="list-style:none;">
-      <div class="each-movie-image">
-        <img src="${tops.image}" alt="movie image">
-      </div>
-        <h1>${tops.title}</h1>
-        </li>
-      </div>
+      <a href="show.html?movie=${tops.title}">
+        <div class="each-movie">
+          <li class="movies" style="list-style:none;">
+        <div class="each-movie-image">
+          <img src="${tops.image}" alt="movie image">
+        </div>
+          <h1>${tops.title}</h1>
+          </li>
+        </div>
+      </a>
       `;
       ul.insertAdjacentHTML("beforeend", top250);
     })

@@ -3,9 +3,9 @@
 const queryStrings = window.location.search
 const urlParams = new URLSearchParams(queryStrings);
 const movieTitle = urlParams.get('movie')
-const div = document.querySelector('#ul')
+const ul = document.querySelector('#ul')
 
-console.log(div)
+console.log(ul)
 
 
 const showPage = (movieTitle) => {
@@ -13,9 +13,9 @@ const showPage = (movieTitle) => {
     .then(response => response.json())
     .then(data => {
       const show = `
-        ${console.log(data.results[0].image)}
+        ${imgdata.results[0].image}
       `;
-      div.insertAdjacentHTML(show)
+      ul.insertAdjacentHTML("beforeend", show)
     })
 }
 

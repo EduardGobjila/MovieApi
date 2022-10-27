@@ -59,7 +59,7 @@ const homePage = () => {
     // console.log(data.items)
     data.items.forEach((tops) => {
       const top250 = `
-      <a href="show.html?movie=${tops.title}">
+      <a href="show.html?movie=${tops.id}">
         <div class="each-movie">
           <li class="movies" style="list-style:none;">
         <div class="each-movie-image">

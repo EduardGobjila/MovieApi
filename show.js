@@ -2,22 +2,23 @@
 
 const queryStrings = window.location.search
 const urlParams = new URLSearchParams(queryStrings);
-const movieTitle = urlParams.get('movie')
+const id = urlParams.get('movie')
 const ul = document.querySelector('#ul')
 
-console.log(ul)
+// console.log(ul)
 
 
-const showPage = (movieTitle) => {
-  fetch(`https://imdb-api.com/en/API/SearchMovie/k_ns10ugu1/${movieTitle}`)
+const showPage = (id) => {
+  fetch(`https://imdb-api.com/en/API/SearchMovie/k_ns10ugu1/${id}`)
     .then(response => response.json())
     .then(data => {
+      console.log(data)
       const show = `
-        ${imgdata.results[0].image}
+        ${data.results[0].image}
       `;
       ul.insertAdjacentHTML("beforeend", show)
     })
 }
 
 
-showPage(movieTitle);
+showPage(id);

@@ -1,7 +1,7 @@
 const queryStrings = window.location.search
 const urlParams = new URLSearchParams(queryStrings);
 const id = urlParams.get('movie')
-const ul = document.querySelector('#ul')
+const image = document.querySelector('#image')
 const header = document.querySelector('#header')
 const descript = document.querySelector('#description')
 
@@ -24,7 +24,7 @@ const showPage = (id) => {
       const desc = `
       <h3>${data.results[0].description}</h3>
       `
-      ul.insertAdjacentHTML("beforeend", show)
+      image.insertAdjacentHTML("beforeend", show)
       header.insertAdjacentHTML('beforeend', title)
       descript.insertAdjacentHTML('beforeend', desc)
     })

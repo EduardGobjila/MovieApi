@@ -1,0 +1,45 @@
+html {
+  background-color: black;
+  width: 100vw;
+  font-family: 'Vesper Libre', serif;
+}
+.container {
+  width: 100vw;
+  text-align: center;
+}
+#header {
+  margin-top: 50px;
+}
+body h1{
+  color: white;
+  font-size: 28px;
+}
+.movies {
+  text-align: center;
+  margin: 40px;
+}
+.movies img {
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid rgb(5, 143, 143);
+}
+#description h3 {
+ font-size: 22px;
+ color: white
+}
+.button {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#home {
+  background-color: rgba(255, 99, 21, 0.733);
+  padding: 9px 50px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: white;
+  transition: 0.4s ease-in-out;
+  font-size: 14px;
+}
+#home:hover {
+  box-shadow: px -2px 4px #F96B;
+}

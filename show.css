@@ -43,3 +43,38 @@ body h1{
 #home:hover {
   box-shadow: px -2px 4px #F96B;
 }
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+.loader::after {
+  content: '';
+  width: 75px;
+  height: 75px;
+  border: 15px solid #ddd;
+  border-top-color: #7449f5;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}

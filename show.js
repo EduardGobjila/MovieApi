@@ -18,21 +18,21 @@ const showPage = (id) => {
     .then(data => {
       // console.log(data)
       if (data.length != 0) {
-        // console.log('hello world')
-      const show = `
-        <img src="${data.results[0].image}">
-      `;
+          // console.log('hello world')
+        const show = `
+          <img src="${data.results[0].image}">
+        `;
 
-      const title = `
-        <h1>${data.results[0].title}</h1>
-      `;
+        const title = `
+          <h1>${data.results[0].title}</h1>
+        `;
 
-      const desc = `
-      <h3>${data.results[0].description}</h3>
-      `
-      image.insertAdjacentHTML("beforeend", show)
-      header.insertAdjacentHTML('beforeend', title)
-      descript.insertAdjacentHTML('beforeend', desc)
+        const desc = `
+        <h3>${data.results[0].description}</h3>
+        `
+        image.insertAdjacentHTML("beforeend", show)
+        header.insertAdjacentHTML('beforeend', title)
+        descript.insertAdjacentHTML('beforeend', desc)
       }
 
         // window.addEventListener('load', () => {

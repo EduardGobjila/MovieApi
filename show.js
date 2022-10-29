@@ -4,7 +4,7 @@ const id = urlParams.get('movie')
 const image = document.querySelector('#image')
 const header = document.querySelector('#header')
 const descript = document.querySelector('#description')
-
+const loader = document.querySelector('.loader')
 // console.log(loader)
 // console.log(ul)
 
@@ -17,6 +17,8 @@ const showPage = (id) => {
     .then(response => response.json())
     .then(data => {
       // console.log(data)
+      if (data.length != 0) {
+        // console.log('hello world')
       const show = `
         <img src="${data.results[0].image}">
       `;
@@ -31,21 +33,19 @@ const showPage = (id) => {
       image.insertAdjacentHTML("beforeend", show)
       header.insertAdjacentHTML('beforeend', title)
       descript.insertAdjacentHTML('beforeend', desc)
+      }
+
+        // window.addEventListener('load', () => {
+          // console.log('hello')
+
+          //  setTimeout(() => {
+         loader.classList.add('loader-hidden')
+          //  }, 3000);
+
+          // })
     })
 
 
   }
 
-
-
-
-window.addEventListener('load', () => {
-  const loader = document.querySelector('.loader')
-
   showPage(id);
- setTimeout(() => {
-
-   loader.classList.add('loader-hidden')
- }, 3000);
-
-})

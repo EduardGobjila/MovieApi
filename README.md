@@ -1,5 +1,4 @@
-# practice-on-own
-
+# MovieApi
   This project is in Vanilla Javascript and Bootstrap I used API to fetch movies from an IMDB movie website, when fetching i used vanilla javascript and 
 the navbar is bootstrap.
 
